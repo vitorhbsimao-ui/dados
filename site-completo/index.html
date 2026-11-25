@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desacato a funcionário público</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Desacato ao funcionário público</h1>
+    </header>
+
+    <nav aria-label="Menu principal">
+        <ul>
+            <li><a href="#intro">Introdução</a></li>
+            <li><a href="#secao2">Como o crime se configura</a></li>
+            <li><a href="#desacatoescola">Desacato escolar</a></li>
+            <li><a href="#form">Formulário</a></li>
+            <li><a href="#admin">Administrador</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- SEÇÃO 1: INTRODUÇÃO -->
+        <section id="intro">
+            <h2>Introdução</h2>
+            <p>O crime de desacato somente ocorre quando o funcionário público está no exercício de sua função ou em razão dela (ou seja, dentro ou fora da repartição pública), podendo ser praticado por qualquer pessoa.</p>
+            <p>Desacatar é o mesmo que humilhar, desrespeitar, desprestigiar. Quando o sujeito ativo humilha, desrespeita ou desprestigia o funcionário público no exercício de sua função ou em razão dela, ele pratica o crime de desacato.</p>
+            <p>Alguns exemplos são xingar um funcionário público, rasgar uma multa, apontar o dedo na face do funcionário e fazer gestos obscenos. Ao praticar esses atos, o cidadão desprestigia a administração pública, que naquele momento está representada pelo funcionário desacatado.</p>
+            <p>O crime pode ocorrer em duas circunstâncias: quando o funcionário está no exercício da função, ou quando não está, mas é desacatado em razão dela.</p>
+            <h3>Desacato na escola</h3>
+            <p>O desacato a funcionário público (como um professor ou servidor de uma escola pública) ocorre quando alguém ofende, humilha ou desrespeita esse profissional no exercício de suas funções ou em razão delas.</p>
+        </section>
+
+        <!-- SEÇÃO 2 -->
+        <section id="secao2">
+            <h2>Como o crime se configura</h2>
+            <ul>
+                <li><strong>Quem é o funcionário público:</strong> abrange professores, diretores, coordenadores e demais funcionários que atuam em escolas da rede pública (municipal, estadual ou federal).</li>
+                <li><strong>A conduta:</strong> pode acontecer por insultos verbais, xingamentos, gestos obscenos, escândalos ou humilhações públicas.</li>
+                <li><strong>Requisito legal:</strong> para ser desacato (art. 331 do Código Penal), a ofensa deve ter a intenção de menosprezar a função pública, e o funcionário precisa estar presente.</li>
+                <li><strong>Pena prevista:</strong> detenção de 6 meses a 2 anos, ou multa.</li>
+            </ul>
+
+            <h2>E se o autor for um aluno menor de idade?</h2>
+            <ul>
+                <li><strong>Estatuto da Criança e do Adolescente (ECA):</strong> menores de 18 anos não cometem "crime" nos termos do Código Penal, mas sim ato infracional.</li>
+                <li><strong>Medidas socioeducativas:</strong> o caso pode ser encaminhado ao Conselho Tutelar e ao Ministério Público, e o Juizado da Infância e da Juventude pode aplicar medidas como advertência, prestação de serviços à comunidade ou liberdade assistida.</li>
+                <li><strong>Responsabilidade dos pais:</strong> pais ou responsáveis podem ser acionados civilmente por omissão na vigilância ou na educação do menor.</li>
+            </ul>
+
+            <h2>Lei</h2>
+            <ul>
+                <li>Art. 331 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal).</li>
+                <li>"Desacatar funcionário público no exercício da função ou em razão dela: pena de detenção, de seis meses a dois anos, ou multa."</li>
+            </ul>
+        </section>
+
+        <!-- SEÇÃO 3 -->
+        <section id="desacatoescola">
+            <h2>O desacato no ambiente escolar</h2>
+            <p>Nas escolas, os casos mais comuns são:</p>
+
+            <h3>Pais ou responsáveis contra professores e diretores</h3>
+            <p>É a situação mais frequente. Alguns exemplos:</p>
+            <ul>
+                <li>Um pai tentou arrombar a escola para retirar a filha durante o horário de aula e, ao ser impedido pela diretora, a ofendeu.</li>
+                <li>Uma mãe xingou a diretora de uma escola municipal ao saber que a professora havia "puxado a orelha" de seu filho.</li>
+                <li>Em Divinópolis (MG), a Patrulha Escolar relatou que 60% dos chamados eram por desacato a professores ou funcionários em exercício.</li>
+            </ul>
+            <!-- Dica: cite a fonte desses casos e do dado de Divinópolis -->
+
+            <h3>Alunos contra professores</h3>
+            <p>Desrespeito em sala de aula e ofensas verbais ao professor durante a aula ou por causa de uma punição ou medida disciplinar.</p>
+        </section>
+
+        <!-- SEÇÃO 4: FORMULÁRIO -->
+        <section id="form">
+            <h2>Portal de denúncias</h2>
+            <p>Use este canal para registrar um caso de desacato a funcionário público na escola. Descreva apenas fatos: o que foi dito ou feito, e quem presenciou. Você pode se identificar ou denunciar de forma anônima.</p>
+
+            <form id="form-denuncia" autocomplete="off" novalidate>
+                <fieldset>
+                    <legend>Nova denúncia</legend>
+
+                    <span class="rotulo">Como você quer denunciar?</span>
+                    <div class="opcoes">
+                        <label class="opcao"><input type="radio" name="identidade" value="anonima" checked> Anonimamente</label>
+                        <label class="opcao"><input type="radio" name="identidade" value="identificada"> Revelando minha identidade</label>
+                    </div>
+
+                    <div id="den-bloco-identidade" hidden>
+                        <label for="den-nome">Seu nome</label>
+                        <input type="text" id="den-nome" name="nome">
+                        <span class="erro" id="erro-den-nome"></span>
+
+                        <label for="den-contato">Contato (opcional: e-mail ou telefone)</label>
+                        <input type="text" id="den-contato" name="contato">
+                    </div>
+
+                    <label for="den-data">Data do ocorrido</label>
+                    <input type="date" id="den-data" name="data" required>
+                    <span class="erro" id="erro-den-data"></span>
+
+                    <label for="den-hora">Horário aproximado</label>
+                    <input type="time" id="den-hora" name="hora" required>
+                    <span class="erro" id="erro-den-hora"></span>
+
+                    <label for="den-local">Local</label>
+                    <select id="den-local" name="local" required>
+                        <option value="">Escolha o local</option>
+                        <option value="Sala de aula">Sala de aula</option>
+                        <option value="Pátio">Pátio</option>
+                        <option value="Corredor">Corredor</option>
+                        <option value="Secretaria ou direção">Secretaria ou direção</option>
+                        <option value="Portão ou entrada">Portão ou entrada</option>
+                        <option value="Quadra">Quadra</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                    <span class="erro" id="erro-den-local"></span>
+
+                    <div id="den-bloco-local" hidden>
+                        <label for="den-local-outro">Qual local?</label>
+                        <input type="text" id="den-local-outro" name="local-outro">
+                        <span class="erro" id="erro-den-local-outro"></span>
+                    </div>
+
+                    <label for="den-acusado">Quem cometeu o desacato?</label>
+                    <input type="text" id="den-acusado" name="acusado" placeholder="Nome ou descrição da pessoa" required>
+                    <span class="erro" id="erro-den-acusado"></span>
+
+                    <label for="den-vinculo">Quem é essa pessoa?</label>
+                    <select id="den-vinculo" name="vinculo" required>
+                        <option value="">Escolha uma opção</option>
+                        <option value="Aluno">Aluno</option>
+                        <option value="Pai, mãe ou responsável">Pai, mãe ou responsável</option>
+                        <option value="Funcionário">Funcionário</option>
+                        <option value="Outra pessoa">Outra pessoa</option>
+                        <option value="Não sei">Não sei</option>
+                    </select>
+                    <span class="erro" id="erro-den-vinculo"></span>
+
+                    <label for="den-descricao">O que aconteceu?</label>
+                    <textarea id="den-descricao" name="descricao" required></textarea>
+                    <span class="erro" id="erro-den-descricao"></span>
+
+                    <div class="botoes">
+                        <button type="submit">Enviar denúncia</button>
+                        <button type="reset" class="secundario">Limpar campos</button>
+                    </div>
+                </fieldset>
+            </form>
+
+            <p id="mensagem-denuncia" role="status" aria-live="polite"></p>
+
+            <h2>Pesquisa para alunos e funcionários</h2>
+
+            <form id="formulario" autocomplete="off" novalidate>
+                <fieldset>
+                    <legend>Perguntas</legend>
+
+                    <label for="pergunta1">Você é aluno ou funcionário?</label>
+                    <select id="pergunta1" name="perfil" required>
+                        <option value="">Escolha uma opção</option>
+                        <option value="Aluno">Aluno</option>
+                        <option value="Funcionário">Funcionário</option>
+                    </select>
+                    <span class="erro" id="erro1"></span>
+
+                    <label for="pergunta2">Você já presenciou um caso de desacato?</label>
+                    <select id="pergunta2" name="presenciou" required>
+                        <option value="">Escolha uma opção</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                    <span class="erro" id="erro2"></span>
+
+                    <label for="pergunta3">Como você acha que poderia resolver isso?</label>
+                    <textarea id="pergunta3" name="solucao" required minlength="10"></textarea>
+                    <span class="erro" id="erro3"></span>
+
+                    <div class="botoes">
+                        <button type="submit">Enviar resposta</button>
+                        <button type="reset" class="secundario">Limpar campos</button>
+                    </div>
+                </fieldset>
+            </form>
+
+            <p id="mensagem" role="status" aria-live="polite"></p>
+
+        </section>
+
+        <!-- SEÇÃO 5: ÁREA DO ADMINISTRADOR -->
+        <section id="admin">
+            <h2>Área do administrador</h2>
+
+            <div id="admin-login">
+                <p>Somente a direção da escola pode ver as denúncias. Entre com o usuário e a senha de administrador.</p>
+                <form id="form-login" autocomplete="off" novalidate>
+                    <fieldset>
+                        <legend>Login</legend>
+
+                        <label for="login-usuario">Usuário</label>
+                        <input type="text" id="login-usuario" name="usuario" autocomplete="username">
+
+                        <label for="login-senha">Senha</label>
+                        <input type="password" id="login-senha" name="senha" autocomplete="current-password">
+
+                        <span class="erro" id="erro-login" role="alert"></span>
+
+                        <div class="botoes">
+                            <button type="submit">Entrar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div id="admin-painel" hidden>
+                <div class="barra-admin">
+                    <p>Você entrou como administrador.</p>
+                    <button type="button" id="sair" class="secundario">Sair</button>
+                </div>
+
+                <h3>Denúncias registradas</h3>
+                <p class="aviso">As denúncias ficam salvas no banco de dados do site e só aparecem depois do login.</p>
+                <ul id="lista-denuncias"></ul>
+                <div class="botoes">
+                    <button type="button" id="apagar-denuncias" class="secundario">Apagar todas as denúncias</button>
+                </div>
+
+                <h3>Respostas da pesquisa</h3>
+                <ul id="lista-respostas"></ul>
+                <div class="botoes">
+                    <button type="button" id="apagar" class="secundario">Apagar todas as respostas</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

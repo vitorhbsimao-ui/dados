@@ -1,0 +1,4 @@
+ALTER TABLE denuncias
+  ADD COLUMN contato TEXT,
+  ADD COLUMN vinculo TEXT NOT NULL DEFAULT 'Não sei',
+  ADD COLUMN protocolo TEXT UNIQUE;

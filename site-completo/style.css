@@ -1,0 +1,384 @@
+/* ---------- Variáveis (paleta original, agora num só lugar) ---------- */
+:root {
+    --fundo: #6C7A65;
+    --verde-claro: #D8E2D0;
+    --verde-medio: #A8B8A0;
+    --verde-escuro: #2F3A33;
+    --papel: #F1F5EC;
+    --destaque: #3E5A46;
+    --borda: #FFFFFF;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* o menu fixo não cobre o título da seção */
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: var(--fundo);
+    color: var(--verde-escuro);
+    line-height: 1.7;
+}
+
+/* ---------- Cabeçalho e menu ---------- */
+header {
+    background-color: var(--verde-medio);
+    text-align: center;
+    padding: 38px 20px 10px;
+}
+
+h1 {
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    line-height: 1.2;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--verde-medio);
+    border-bottom: 2px solid var(--verde-escuro);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+}
+
+nav a {
+    display: block;
+    min-width: 150px;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+    border: 1px solid var(--verde-escuro);
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--verde-medio);
+    transform: translateY(-2px);
+}
+
+/* link da seção que está na tela (classe colocada pelo JavaScript) */
+nav a.ativo {
+    background-color: var(--verde-escuro);
+    color: var(--verde-claro);
+}
+
+/* ---------- Seções ---------- */
+section {
+    background-color: var(--verde-claro);
+    border: 2px solid var(--borda);
+    border-radius: 12px;
+    margin: 25px auto;
+    padding: 28px;
+    width: 90%;
+    max-width: 900px; /* linhas de texto mais curtas = leitura mais fácil */
+    box-shadow: var(--sombra);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--verde-medio);
+}
+
+h3 {
+    margin: 18px 0 8px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+section ul {
+    margin: 0 0 16px 22px;
+}
+
+section li {
+    margin-bottom: 8px;
+}
+
+/* ---------- Formulário ---------- */
+.titulo-form {
+    text-align: center;
+    padding: 20px 20px 0;
+    background: none;
+    color: var(--verde-claro);
+}
+
+fieldset {
+    background-color: var(--papel);
+    border: 2px solid var(--verde-medio);
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    gap: 6px;
+}
+
+legend {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 4px 12px;
+    background-color: var(--verde-escuro);
+    color: var(--verde-claro);
+    border-radius: 6px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    color: var(--verde-escuro);
+    background-color: #fff;
+    border: 1px solid var(--verde-escuro);
+    border-radius: 8px;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.erro {
+    color: #8A2B1F;
+    font-size: 0.9rem;
+    min-height: 1.2em;
+}
+
+input.invalido,
+select.invalido,
+textarea.invalido {
+    border-color: #8A2B1F;
+    border-width: 2px;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: 2px solid var(--verde-escuro);
+    cursor: pointer;
+    background-color: var(--verde-escuro);
+    color: var(--verde-claro);
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--destaque);
+}
+
+button.secundario {
+    background-color: transparent;
+    color: var(--verde-escuro);
+}
+
+button.secundario:hover {
+    background-color: var(--verde-medio);
+}
+
+/* ---------- Respostas enviadas ---------- */
+#mensagem {
+    margin-top: 14px;
+    font-weight: bold;
+}
+
+#lista-respostas {
+    list-style: none;
+    margin: 12px 0 0;
+    display: grid;
+    gap: 12px;
+}
+
+#lista-respostas li {
+    background-color: var(--papel);
+    border-left: 6px solid var(--destaque);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 0;
+}
+
+#lista-respostas strong {
+    display: block;
+    font-family: Arial, sans-serif;
+}
+
+/* ---------- Acessibilidade ---------- */
+:focus-visible {
+    outline: 3px solid #1E2A22;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    * {
+        transition: none !important;
+    }
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 600px) {
+    section {
+        padding: 18px;
+    }
+    nav a {
+        min-width: 0;
+        padding: 8px 12px;
+    }
+}
+
+/* ---------- Portal de denúncias ---------- */
+[hidden] {
+    display: none !important;
+}
+
+section h2 + .botoes,
+#form h2:not(:first-child) {
+    margin-top: 30px;
+}
+
+.rotulo {
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 10px 14px;
+    background-color: #fff;
+    border: 1px solid var(--verde-escuro);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.opcao:has(input:checked) {
+    background-color: var(--verde-medio);
+}
+
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    color: var(--verde-escuro);
+    background-color: #fff;
+    border: 1px solid var(--verde-escuro);
+    border-radius: 8px;
+}
+
+input.invalido {
+    border-color: #8A2B1F;
+    border-width: 2px;
+}
+
+.aviso {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+#lista-denuncias {
+    list-style: none;
+    margin: 12px 0;
+    display: grid;
+    gap: 12px;
+}
+
+#lista-denuncias li {
+    background-color: var(--papel);
+    border-left: 6px solid #8A2B1F;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 0;
+}
+
+#lista-denuncias strong {
+    display: block;
+    font-family: Arial, sans-serif;
+}
+
+#lista-denuncias p {
+    margin: 4px 0 0;
+}
+
+/* ---------- Área do administrador ---------- */
+#admin {
+    border-color: var(--verde-escuro);
+}
+
+.barra-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 16px;
+    margin-bottom: 14px;
+    background-color: var(--verde-medio);
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.barra-admin p {
+    margin: 0;
+}
+
+#admin-login fieldset {
+    max-width: 420px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    color: var(--verde-escuro);
+    background-color: #fff;
+    border: 1px solid var(--verde-escuro);
+    border-radius: 8px;
+}

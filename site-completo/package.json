@@ -1,0 +1,8 @@
+{
+  "name": "site-desacato-backend",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@netlify/database": "latest"
+  }
+}
