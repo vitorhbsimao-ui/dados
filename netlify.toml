@@ -2,3 +2,9 @@
   base = "site-completo"
   publish = "."
   functions = "netlify/functions"
+
+[build.environment]
+  # O valor de ADMIN_USER (ex: "admin") é uma palavra comum que aparece em
+  # vários arquivos do site (ids, classes, textos), sem ser um vazamento real.
+  # Isso evita que o build falhe por falso positivo do scanner de segredos.
+  SECRETS_SCAN_OMIT_KEYS = "ADMIN_USER"
